@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Дано кількість секунд, що пройшла від початку доби. Визначити скільки це
+      годин і хвилин.
+    </p>
+    <script>
+      let numberOfSeconds = parseInt(
+        prompt("Введіть кількість пройдених секунд", "0")
+      );
+      let numberOfMinutes = numberOfSeconds / 60;
+      let numberOfHours = numberOfSeconds / 3600;
+      document.write(`Пройшло ${numberOfMinutes} хвилин <br>`);
+      document.write(`Пройшло ${numberOfHours} годин <br>`);
+    </script>
+  </body>
+</html>

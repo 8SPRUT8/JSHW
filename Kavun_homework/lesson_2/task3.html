@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ
+      (5% від загальної вартості).
+    </p>
+    <script>
+      let CostPerProductUnit = parseFloat(
+        prompt("Введіть ціну товару за штуку", "0")
+      );
+      let NumberOfUnitsProduct = parseInt(
+        prompt("Введіть кількість одиниць товару", "0")
+      );
+      let totalCost = CostPerProductUnit * NumberOfUnitsProduct;
+      let totalTax = totalCost * 0.05;
+      document.write(`Загальна вартість ${totalCost.toFixed(3)} <br>`);
+      document.write(`ПДВ ${totalTax.toFixed(3)}`);
+    </script>
+  </body>
+</html>

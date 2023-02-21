@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h2 {
+        margin-bottom: 0;
+      }
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      З клавіатури вводяться вартість товару та кількість одиниць 3 товарів.
+      Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек
+      (як у супермаркеті) використовуючи елементи розмітки.
+    </p>
+    <script>
+      let price1 = parseFloat(prompt("Ціна сала (грн/кг)", "0"));
+      let number1 = parseInt(prompt("Кількість сала (кг)", "0"));
+      let price2 = parseFloat(prompt("Ціна часнику (грн/шт)", "0"));
+      let number2 = parseInt(prompt("Кількість часнику (шт)", "0"));
+      let price3 = parseFloat(prompt("Ціна хліба (грн/шт)", "0"));
+      let number3 = parseInt(prompt("Кількість хліба (шт)", "0"));
+      let totalPrice1 = price1 * number1;
+      let totalPrice2 = price2 * number2;
+      let totalPrice3 = price3 * number3;
+      let totalPriceAll = totalPrice1 + totalPrice2 + totalPrice3;
+      document.write("<h2>Чек</h2>");
+      document.write("<span>-------------------------------</span>");
+      document.write(
+        `<p>Сало <br> ${price1}грн/кг * ${number1}кг = ${totalPrice1}грн</p>`
+      );
+      document.write(
+        `<p>Часник <br> ${price2}грн/шт * ${number2}шт = ${totalPrice2}грн</p>`
+      );
+      document.write(
+        `<p>Хліб <br> ${price3}грн/шт * ${number3}шт = ${totalPrice3}грн</p>`
+      );
+      document.write("<br><span>--------------------------------</span><br>");
+      document.write(`Загальна вартість = ${totalPriceAll}грн`);
+    </script>
+  </body>
+</html>
